@@ -8,16 +8,17 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>PAS MARKET</title>
-        <link rel="stylesheet" type="text/css" href="estiloPrincipal.css">
+        <link rel="stylesheet" type="text/css" href="../Estilos/estiloBody.css">
+        <link rel="stylesheet" type="text/css" href="../Estilos/estiloHeader.css">
     </head>
     <body>
         <?php
-            
+
         ?>
         <header>
             <img src="">
             <section class="logo" id="logo">
-                <img src="Captura.svg"/>
+                <img src="../Imagenes/Captura.svg"/>
             </section>
             <section class="barUsuario">
                 <a id="hueco1" href="#"></a>
@@ -45,7 +46,7 @@ and open the template in the editor.
                 <a href="#">Clients</a>
                 <a href="#">Contact</a>
             </section>
-            
+
             <section class="catalogo" id="mycatalogo">
                 <table border=1 id="ofertas">
                     <tr class="celdaCat">
@@ -87,7 +88,7 @@ and open the template in the editor.
             </section>
         </section>
         <footer>
-            
+
         </footer>
         <script>
             function openNav() {
@@ -106,7 +107,7 @@ and open the template in the editor.
                 document.getElementById("mycatalogo").style.width = "100%";
                 document.getElementById("logo").style.marginLeft = "80px";
             }
-            
+
         </script>
     </body>
 </html>

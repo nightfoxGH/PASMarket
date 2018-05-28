@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.cuerpo {
+    position: relative;
+    top:0;
+    width: 100%;
+    height: 1000px;
+
+    border: 3px blue solid;
+}
+
+section.desplegable {
+    position: relative;
+    width: 25%;
+    height: 100%;
+
+    border: 3px blueviolet solid;
+}
+
+section.catalogo {
+    position: absolute;
+    width: 100%;
+    top:0;
+    right:0;
+    height: 100%;
+    transition: 0.5s;
+    border: 3px black solid;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 250px;
+
+    border: 3px darkorange solid;
+}
+
+section.desplegable {
+    height: 100%; /* ocupa todo el largo */
+    width: 0; /* cambia con JavaScript */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /* Desactivar scroll lateral */
+    padding-top: 60px;
+    transition: 0.5s; /* 0.5 de transicion (efecto) */
+}
+section.desplegable a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+section.desplegable a:hover{
+    color: #f1f1f1;
+}
+section.desplegable .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 1%;
+}
+section.cuerpo {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+#ofertas {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.celdaCat {
+    height: 200px;
+    width: 250px;
+}
