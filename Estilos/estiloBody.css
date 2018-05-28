@@ -106,7 +106,11 @@ div.desOculto {
   padding-left: 8px;
 }
 
+<<<<<<< HEAD
 i.fa-caret-down {
+=======
+.fa-caret-down {
+>>>>>>> 505770d28f25ddb454fa9241bd1cb61f5e43ca1a
   float: right;
   padding-right: 8px;
 }

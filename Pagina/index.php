@@ -39,8 +39,13 @@
             <section class="desplegable" id="mydesplegable">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">Ordenadores</a>
+<<<<<<< HEAD
                   <button class="dropdownDesplegable-btn">dropdown
                     <i class="fa-caret-down"/>
+=======
+                  <button class="dropdownDesplegable-btn">
+                    <i class="fa fa-caret-down"/>
+>>>>>>> 505770d28f25ddb454fa9241bd1cb61f5e43ca1a
                   </button>
                   <div class="desOculto">
                     <a href="#">SubCat1</a>
