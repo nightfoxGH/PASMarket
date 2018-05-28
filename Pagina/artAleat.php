@@ -25,8 +25,8 @@
         </header>
         <nav class="topnav" id="myTopnav">
             <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-            <a href="#home" class="active">Inicio</a>
-            <a href="artAleat.php">Articulo Aleatorio</a>
+            <a href="index.php">Inicio</a>
+            <a href="artAleat.php" class="active">Articulo Aleatorio</a>
             <a href="#contact">Ofertas</a>
             <a href="#about">Sobre PAS</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -38,58 +38,14 @@
             <section class="desplegable" id="mydesplegable">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">Ordenadores</a>
-                  <button class="dropdownDesplegable-btn">
-                    <i class="fa fa-caret-down"/>
-                  </button>
-                  <div class="desOculto">
-                    <a href="#">SubCat1</a>
-                    <a href="#">SubCat2</a>
-                    <a href="#">SubCat3</a>
-                  </div>
-                <a href="#">Perifericos</a>
                 <a href="#">Componentes</a>
+                <a href="#">Ordenadores</a>
                 <a href="#">Tablets</a>
                 <a href="#">Accesorios</a>
             </section>
 
-            <section class="catalogo" id="mycatalogo">
-                <table border=1 id="ofertas">
-                    <tr class="celdaCat">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="celdaCat"v>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="celdaCat">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="celdaCat">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="celdaCat">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
+            <section class="artRandom" id="myRandom">
+
             </section>
         </section>
         <footer>
@@ -100,8 +56,8 @@
                 /*document.getElementById("myTopnav").style.width = "85%";
                 document.getElementById("myTopnav").style.marginLeft = "15%";*/
                 document.getElementById("mydesplegable").style.width = "15%";
-                document.getElementById("mycatalogo").style.marginLeft = "250px";
-                document.getElementById("mycatalogo").style.width = "85%";
+                document.getElementById("myRandom").style.marginLeft = "250px";
+                document.getElementById("myRandom").style.width = "85%";
                 /*document.getElementById("logo").style.marginLeft = "15%";*/
                 document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             }
@@ -109,8 +65,8 @@
                 /*document.getElementById("myTopnav").style.width = "100%";
                 document.getElementById("myTopnav").style.marginLeft = "0%";*/
                 document.getElementById("mydesplegable").style.width = "0";
-                document.getElementById("mycatalogo").style.marginLeft= "0";
-                document.getElementById("mycatalogo").style.width = "100%";
+                document.getElementById("myRandom").style.marginLeft= "0";
+                document.getElementById("myRandom").style.width = "100%";
                 /*document.getElementById("logo").style.marginLeft = "80px";*/
                 document.body.style.backgroundColor = "white";
             }

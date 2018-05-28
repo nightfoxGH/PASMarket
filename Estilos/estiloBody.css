@@ -12,14 +12,14 @@ section.cuerpo {
     border: 3px blue solid;
 }
 
-section.desplegable {
+/*section.desplegable {
     position: relative;
     width: 25%;
     height: 100%;
 
     border: 3px blueviolet solid;
 }
-
+*/
 section.catalogo {
     position: absolute;
     width: 100%;
@@ -56,9 +56,17 @@ section.desplegable a{
     font-size: 25px;
     color: #818181;
     display: block;
+
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+
+
     transition: 0.3s;
 }
-section.desplegable a:hover{
+
+section.desplegable a:hover, section.dropdownDesplegable-btn:hover{
     color: #f1f1f1;
 }
 section.desplegable .closebtn {
@@ -68,6 +76,18 @@ section.desplegable .closebtn {
     font-size: 36px;
     margin-left: 1%;
 }
+
+div.desOculto {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
 section.cuerpo {
     transition: margin-left .5s;
     padding: 20px;

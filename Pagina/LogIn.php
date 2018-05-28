@@ -13,6 +13,8 @@ and open the template in the editor.
     </head>
     <body>
         <section class="fondo">
+          <img id="imagenIzq" src="../Imagenes/Captura.svg"/>
+          <img id="imagenDer" src="../Imagenes/Captura.svg"/>
             <section class="login">
                 <form action="/action_page.php">
                     Nombre de perfil:<br>
