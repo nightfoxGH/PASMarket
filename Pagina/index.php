@@ -26,10 +26,10 @@
         </header>
         <nav class="topnav" id="myTopnav">
             <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-            <a href="#home" class="active">Inicio</a>
+            <a href="index.php" class="active">Inicio</a>
             <a href="artAleat.php">Articulo Aleatorio</a>
-            <a href="#contact">Ofertas</a>
-            <a href="#about">Sobre PAS</a>
+            <a href="ofertas.php">Ofertas</a>
+            <a href="contact.php">Sobre PAS</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
