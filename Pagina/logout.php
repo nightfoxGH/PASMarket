@@ -10,10 +10,11 @@
       <h2>Log-out / Registrate</h2>
     </div>
     <section class="fondo">
-      <img id="imagenDer" src="../Imagenes/Captura22.svg"/>
+      <img id="imageDer" src="Captura22.svg"/>
+      <section class="backgroundForm">
+        </section>
         <section class="logout">
             <form action="/action_page.php">
-              <br>
                 Nombre:<br><br>
                 <input type="text" name="nombre" value="Nombre">
                 <br><br>
@@ -43,7 +44,7 @@
                 <br><br>
                 <input type="submit" value="Registrarse">
             </form>
-        </section>
+      </section>
     </section>
   </body>
 </html>
