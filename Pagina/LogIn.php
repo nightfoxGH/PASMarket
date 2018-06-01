@@ -21,7 +21,8 @@ and open the template in the editor.
                     <input type="text" name="nPerfil" value="Nombre de Perfil">
                     <br>
                     Contraseña:<br>
-                    <input type="Contraseña" name="pass" value="Contraseña">
+                    <input type="password
+                    " name="pass" value="Contraseña">
                     <br><br>
                     <input type="submit" value="Iniciar Sesion">
                 </form>
