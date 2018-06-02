@@ -20,7 +20,7 @@
             <section class="barUsuario">
                 <a id="hueco1" href="#"></a>
                 <a id="hueco2" href="#"></a>
-                <a id="hueco3" href="logout.php">Log On</a>
+                <a id="hueco3" href="logon.php">Log On</a>
                 <a id="hueco4" href="LogIn.php">Log In</a>
             </section>
         </header>

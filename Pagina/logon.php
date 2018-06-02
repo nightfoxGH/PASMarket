@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" charset="utf-8">
-    <link rel="stylesheet" href="Estilologout.css">
+    <link rel="stylesheet" href="../Estilos/estiloLogon.css">
 
   </head>
   <body>
@@ -10,7 +10,8 @@
       <h2>Log-out / Registrate</h2>
     </div>
     <section class="fondo">
-      <img id="imageDer" src="Captura22.svg"/>
+      <img id="imagenIzq" src="../Imagenes/Captura.svg"/>
+      <img id="imagenDer" src="../Imagenes/Captura22.svg"/>
       <section class="backgroundForm">
         </section>
         <section class="logout">
@@ -43,6 +44,7 @@
                 <input type="text" name="cod_postal" value="Codigo Postal">
                 <br><br>
                 <input type="submit" value="Registrarse">
+                <input type="button" value="Volver a Tienda" onclick = "location='index.php'">
             </form>
       </section>
     </section>
