@@ -15,27 +15,36 @@
       <section class="backgroundForm">
         </section>
         <section class="logout">
-            <form action="/action_page.php">
+            <form action="../php/registro.php" method="POST">
                 Nombre:<br><br>
                 <input type="text" name="nombre" value="Nombre">
+                <br><br>
+                Apellidos:<br><br>
+                <input type="text" name="apellidos" value="Apellidos">
+                <br><br>
+                Usuario:<br><br>
+                <input type="text" name="usuario" value="Usuario">
                 <br><br>
                 Contraseña:<br><br>
                 <input type="text" name="pass" value="Contraseña">
                 <br><br>
-                Fecha de nacimiento:<br><br>
-                <input type="text" name="nacimiento" value="Fecha de Nacimiento">
-                <br><br>
                 DNI:<br><br>
                 <input type="text" name="dni" value="DNI">
                 <br><br>
-                Localidad:<br><br>
-                <input type="text" name="localidad" value="Localidad">
+                Fecha de nacimiento:<br><br>
+                <input type="text" name="nacimiento" value="Fecha de Nacimiento">
+                <br><br>
+                Correo:<br><br>
+                <input type="text" name="correo" value="Correo">
+                <br><br>
+                País:<br><br>
+                <input type="text" name="pais" value="Pais">
                 <br><br>
                 Provincia:<br><br>
                 <input type="text" name="provincia" value="Provincia">
                 <br><br>
-                País:<br><br>
-                <input type="text" name="pais" value="Pais">
+                Localidad:<br><br>
+                <input type="text" name="localidad" value="Localidad">
                 <br><br>
                 Domicilio:<br><br>
                 <input type="text" name="domicilio" value="Domicilio">

@@ -10,7 +10,76 @@
     </head>
     <body>
         <?php
+        //definir variables
+/*        $usuario = "admin";
+        $contraseña = "ATF147888"
+        $servidor = "localhost";
+        $basededatos = "pasmarket";
+        // Loguear en el servidor con el usuario admin
+        $conexion = mysqli_connect( $servidor, $usuario, $contraseña ) or die
+        ("No se ha podido conectar al servidor de la BD");
+        // Conexion a la base de datos con la conexion anterior
+        $db = mysqli_select_db( $conexion, $basededatos ) or die
+        ("No se conecta");
 
+        $consulta = "SELECT * FROM sobremesa";
+
+        $resultado = mysqli_query( $conexion, $consulta ) or die
+        ("No funciona la consulta");
+
+        echo "<table borde='2'>";
+        echo "<tr>";
+        echo "<th>Nombre</th>";
+        echo "<th>Edad</th>";
+        echo "<th>Nombre</th>";
+        echo "<th>Edad</th>";
+        echo "<th>Nombre</th>";
+        echo "<th>Edad</th>";
+        echo "<th>Nombre</th>";
+        echo "<th>Edad</th>";
+        echo "<th>Nombre</th>";
+        echo "<th>Edad</th>";
+        echo "</tr>";
+        while ($columna = mysqli_fetch_array( $resultado ))
+        {
+          echo "<tr>";
+          echo "<td>" . $columna['cod'] . "</td><td>" . $columna['nombre'] . "</td>"<td>" . $columna['pvp'] . "</td>
+          <td>" . $columna['descripcion'] . "</td><td>" . $columna['marca'] . "</td>
+          <td>" . $columna['tipo'] . "</td><td>" . $columna['disponible'] . "</td>
+          <td>" . $columna['so'] . "</td><td>" . $columna['oferta'] . "</td><td>" . $columna['valoracion'] . "</td>;
+          echo "</tr>";
+        }
+        echo "</table>";
+*/
+/*
+$mysqli = new mysqli("localhost", "root", "", "pasmarket");
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+echo $mysqli->host_info . "\n";
+
+$mysqli = new mysqli("127.0.0.1", "root", "", "pasmarket", 3306);
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
+echo $mysqli->host_info . "\n";
+*/
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
         ?>
         <header>
             <img src="">

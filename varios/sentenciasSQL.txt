@@ -117,3 +117,51 @@ create table contacto (
     pais varchar (20),
     mensaje text
 );
+
+
+
+
+create table portatil (
+	cod_pc_portatil int not null AUTO_INCREMENT PRIMARY KEY,
+	nombre varchar (100) not null,
+	pvp double (4,2) not null,
+    	descripcion text,
+   	marca varchar (20),
+  	tipo varchar (10),
+   	disponible boolean DEFAULT true,
+  	so boolean default true,
+    	oferta boolean DEFAULT false,
+    	valoracion int (1)
+);
+
+
+
+----PRUEBAS------
+
+
+
+
+create table inventario (
+	cod_pc_sobremesa int not null,
+	cod_pc_portatil int not null,
+	cod_componente int not null,
+	cod_periferico int not null,
+	cod_movil int not null,
+	cod_accesorio int not null,
+	cod_tablet int not null,
+	constraint cod_pc_sobremesa FOREIGN KEY references sobremesa(cod_pc_sobremesa),
+	constraint cod_pc_portatil foreing key references portatil(cod_pc_portatil),
+	constraint cod_componente foreing key references componentes(cod_comp),
+	constraint cod_periferico foreing key references perifericos(cod_periferico),
+	constraint cod_movil foreing key references movil(cod_movil),
+	constraint cod_accesorio foreing key references accesorios(cod_ac),
+	constraint cod_tablet foreing key cod_tablet references tablets(cod_tablet)
+);
+
+	FOREIGN KEY cod_pc_sobremesa references sobremesa(cod_pc_sobremesa),
+	foreing key cod_pc_portatil references portatil(cod_pc_portatil),
+	foreing key cod_componente references componentes(cod_comp),
+	foreing key cod_periferico references perifericos(cod_periferico),
+	foreing key cod_movil references movil(cod_movil),
+	foreing key cod_accesorio references accesorios(cod_ac),
+	foreing key cod_tablet references tablets(cod_tablet)
