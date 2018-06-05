@@ -1,0 +1,12 @@
+Con lo cual para cerrar sesión habrá aue escribir esto:
+
+<?php
+session_start();
+unset ($SESSION['username']);
+
+session_destroy();
+header('Location: http://localhost:8079/phpLogin/login.php');
+
+?>
+
+//En caso de duda recurrir a Desirée Zatón.

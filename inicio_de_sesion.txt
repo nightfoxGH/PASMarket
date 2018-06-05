@@ -1,0 +1,121 @@
+<?php
+
+	session_start();
+
+	?>
+
+	<?php
+
+	$host_db = "localhost";
+	$user_db = "root";
+	$pass_db = "";
+	$db_name = "basedatos";
+	$tbl_name = "Usuarios";
+
+	$conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
+
+	if ($conexion->connect_error) {
+	 die("La conexion falló: " . $conexion->connect_error);
+	}
+
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	  
+
+	$sql = "SELECT * FROM $tbl_name WHERE nombre_usuario = '$username'";
+	 
+	$result = $conexion->query($sql);
+
+	 
+	if ($result->num_rows > 0) {    
+
+	 }
+
+	 $row = $result->fetch_array(MYSQLI_ASSOC);
+
+	 if (password_verify($password, $row['password'])) {
+
+	    $_SESSION['loggedin'] = true;
+	    $_SESSION['username'] = $username;
+	    $_SESSION['start'] = time();
+	    $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+
+	    echo "Bienvenido! " . $_SESSION['username'];
+	    echo "<br><br><a href=panel-control.php>Panel de Control</a>";
+ 
+	 } else {
+
+	   echo "Username o Password estan incorrectos.";
+
+	 
+	   echo "<br><a href='login.html'>Volver a Intentarlo</a>";
+	 }
+	 mysqli_close($conexion);
+
+	 ?>
+
+Esto sería para comprobar el inicio de sesión.
+Cóm swe puede ver, están las variables y funciones típicas de conexión y verificación de error.
+En la variable $sql guarda la consulta SQL que verifica si el nombre de usuario  ya existe en la base de datos.
+La variable $result guarda el resultado de la función query() usando como parámetro el resultado de la variable $sql.
+Si (if) $result->num_rows  es mayor que  0. La condición se cumple y sigue.
+$row guarda el resultado de la función fetch_array(MYSQLI_ASSOC); la cual se utiliza para extraer data de la base de datos en forma de arreglo (array). 
+En este caso, solo extraerá el password.
+Si la verificación de la función password_verify(); es exitosa continua con el resto del programa. De lo contrario (else) quiere decir que el nombre de usuario o password están incorrectos.
+También se crea la sesión para un usuario en particular y se establece el tiempo de duración de la sesión, en este caso 5 minutos.
+Una vez el usuario hace login con éxito, le muestra un mensaje de bienvenida con un enlace al Panel de Control.
+<?php
+
+	session_start();
+
+	 
+
+	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+	} else {
+
+	   echo "Esta pagina es solo para usuarios registrados.<br>"
+	   echo "<br><a href='login.php'>Login</a>";
+	   echo "<br><br><a href='index.html'>Registrarme</a>";
+           exit;
+        }
+
+	$now = time();
+
+	if($now > $_SESSION['expire']) {
+	session_destroy();
+
+	echo "Su sesion a terminado,
+	<a href='login.html'>Necesita Hacer Login</a>";
+	exit;
+	}
+
+	?>
+
+Y entonces tendriamos que crear el html:
+Lo mando por txt para que se lea en cualquier ordenador.
+
+<!DOCTYPE html>
+
+	<html lang="en">
+	<head>
+	<title>Panel de Control</title>
+	</head>
+
+	<body>
+	<h1>Panel de Control</h1>
+	<p>Aqui hirian los enlaces que le permitirian al usuario
+	editar su perfil o cualquier otra cosa que desees.</p>
+
+	<ul>
+	  <li>Editar Perfil</li>
+	  <li>Editar Preferencias</li>
+	  <li>Editar Configuracion</li>
+	  <li>etc.</li>
+	</ul>
+	 
+	<br><br>
+	<a href=logout.php>Cerrar Sesion X </a>
+	</body>
+
+	</html>

@@ -7,11 +7,11 @@
   </head>
   <body>
     <div class="contenido">
-      <h2>Log-out / Registrate</h2>
+      <h1>Log On / Regístrate</h1>
     </div>
     <section class="fondo">
       <img id="imagenIzq" src="../Imagenes/Captura.svg"/>
-      <img id="imagenDer" src="../Imagenes/Captura22.svg"/>
+
       <section class="backgroundForm">
         </section>
         <section class="logout">

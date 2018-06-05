@@ -1,20 +1,24 @@
 section.fondo {
     width: 100%;
     height: 100%;
-}
 
-h2 {
+}
+body {
+  background-color: orange;
+}
+h1 {
   text-align: center;
+  margin-right: 20%;
 }
 
 section.logout {
   position: absolute;
   margin: auto;
-    top: 0;
-    left:0;
+    top: 2;
+    left:60%;
     right:0;
     bottom:0;
-    height: 650px;
+    height: 700px;
     width: 250px;
     /*height: 15%;
     width: 10%;*/
@@ -34,13 +38,13 @@ section.backgroundForm {
   position: absolute;
   border-radius: 35px;
   padding: 100px;
-  background-color: #DF9191;
-  height: 650px;
+  background-color: #1CB8E7;//#DF9191;
+  height: 850px;
   width: 250px;
   margin: auto;
-  top:100px;
+  top:350px;
   right: 0;
-  left: 0;
+  left: 60%;
   bottom: 0;
 }
 input[type=button] {
@@ -61,15 +65,16 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: left;
+
 }
 
 #imagenIzq {
   position: absolute;
   top: 20%;
-  left: 5%;
+  left: 15%;
 }
-#imagenDer {
+/*#imagenDer {
   position: absolute;
   top: 20%;
   right: 5%;
-}
+}*/
