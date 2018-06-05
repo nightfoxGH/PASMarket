@@ -14,7 +14,7 @@ and open the template in the editor.
     <body>
         <section class="fondo">
           <img id="imagenIzq" src="../Imagenes/Captura.svg"/>
-          <img id="imagenDer" src="../Imagenes/Captura22.svg"/>
+          <img id="imagenDer" src="../Imagenes/Captura_2.png"/>
             <section class="login">
                 <form action="/action_page.php">
                     Nombre de perfil:<br>
