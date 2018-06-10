@@ -11,6 +11,7 @@ El archivo validad.php nos va a validar todo lo que pongamos (si no entendeis el
 
 En include.rar hay una carpeta la cual hay que descomprimirla en donde estan nuestro archivos php
 para que funcione correctamente el index2.php y admin.php
+Os lo doy todo ya descomprimido, pero sin el css y las fotos porque no hacen falta pñara lo que queremos.
 
 
 
