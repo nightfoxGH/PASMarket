@@ -1,0 +1,20 @@
+Procesador INTEL CORE i7-7700  3.6GHZ Socket LGA 1151 Séptima Generación
+
+Descripción:
+Procesador Intel de séptima generación (i7-7700).
+
+Precio: 264,47€
+
+Intel Core i7-7700 
+Marca	Intel
+Peso del producto	272 g
+Dimensiones del producto	11,9 x 7,4 x 11,2 cm
+Color	Gris
+Fabricante del procesador	Intel
+Velocidad del procesador	3.6 GHz
+Toma del procesador	Socket H4 (LGA 1151)
+Número de procesadores	4
+Tipo de memoria del ordenador	DDR4 SDRAM
+Interfaz del disco duro	Desconocido
+Potencia eléctrica	65
+Plataforma de Hardware	PC
