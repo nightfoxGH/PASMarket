@@ -155,7 +155,12 @@ echo "Connected successfully";
             </section>
         </section>
         <footer>
-
+<p><i>Contáctanos, siempre a tu disposición.</i></p>
+<p>Calle Vargas, 65, 39010 Santander, Cantabria.</p>
+<p>Teléfono de atención al cliente: 942231344</p>
+<br>
+<br>
+<h1>Tu satisfacción es lo primero.</h1>
         </footer>
         <script>
             function openNav() {
