@@ -6,6 +6,11 @@
 
   </head>
   <body>
+    <?php
+      if ($register_error_message != "") {
+        echo '<div class="alert alert-danger"><strong>Error: </strong> ' . $register_error_message . '</div>';
+      }
+    ?>
     <div class="contenido">
       <h1>Log On / Regístrate</h1>
     </div>

@@ -2,6 +2,6 @@ footer{
     position: relative;
     width: 100%;
     height: 250px;
-
+    bottom: 0;
     border: 3px darkorange solid;
 }

@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>LOG IN</title>
@@ -16,9 +12,9 @@ and open the template in the editor.
           <img id="imagenIzq" src="../Imagenes/Captura.svg"/>
           <img id="imagenDer" src="../Imagenes/Captura_2.png"/>
             <section class="login">
-                <form action="/action_page.php">
+                <form  method="POST" action="../PHP/login.php">
                     Nombre de perfil:<br>
-                    <input type="text" name="nPerfil" value="Nombre de Perfil">
+                    <input type="text" name="user" value="Nombre de Perfil">
                     <br>
                     Contraseña:<br>
                     <input type="password" name="pass" value="Contraseña">

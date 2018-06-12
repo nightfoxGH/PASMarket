@@ -22,8 +22,12 @@ header section.logo {
     width: 350px;
     top: 80px;
     left: 80px;
+    transition: transform .5s; /* Animation */
 
     /*border: black 3px solid;*/
+}
+header section.logo:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 header section.logo img{
     height: 200px;
