@@ -43,4 +43,5 @@ if($consulta){
 
     header('Location: ../Pagina/LogIn.php'); //recargar la pagina para volver a introducir datos
 }
+
 ?>

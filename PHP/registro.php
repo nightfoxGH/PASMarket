@@ -38,7 +38,7 @@ $cod_postal=$_POST['cod_postal'];
 // Ejecutamos la consulta y la guardamos en una variable para control
 
     $ejecutar = mysqli_query($mysqli, "INSERT INTO `clientes`(`nombre`, `apellidos`, `usuario`, `pass`, `dni`, `fecha_nacimiento`, `correo`, `pais`, `provincia`, `localidad`, `domicilio`, `cod_postal`)
-     VALUES ('$nombre','$apellidos','$usuario','pass','$dni','$nacimiento','$correo','$pais','$provincia','$localidad','$domicilio','$cod_postal')");
+     VALUES ('$nombre','$apellidos','$usuario','$pass','$dni','$nacimiento','$correo','$pais','$provincia','$localidad','$domicilio','$cod_postal')");
 
 //verificar si se ha ejecutado satisfactoriamente
 
