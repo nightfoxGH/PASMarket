@@ -18,6 +18,7 @@ $apellidos=$_POST['apellidos'];
 $region=$_POST['region'];
 $mensaje=$_POST['mensaje'];
 
+<<<<<<< HEAD
 
 //$sql = "INSERT INTO `contacto`('nombre','apellidos','region','mensaje')
 //VALUES ('$nombre','$apellidos','$region','$mensaje')";
@@ -37,9 +38,22 @@ $ejecutar = mysqli_query($mysqli, "INSERT INTO `contacto`(`nombre`, `apellidos`,
 //verificar si se ha ejecutado satisfactoriamente
 
 if(!$ejecutar){
+=======
+//$sql = "INSERT INTO `contacto`('nombre','apellidos','region','mensaje')
+//VALUES ('$nombre','$apellidos','$region','$mensaje')";
+
+$consulta = mysqli_query ($mysqli, "INSERT INTO `contacto`('nombre','apellidos','region','mensaje')
+     VALUES ('$nombre','$apellidos','$region','$mensaje')");
+
+if(!$consulta){
+>>>>>>> 0d1194c14fec51ab15bbfbbc1e0a1e6a7e37c3d0
     echo"Error al ejecutar";
 }
 else {
     echo"Datos guardados correctamente";
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 0d1194c14fec51ab15bbfbbc1e0a1e6a7e37c3d0

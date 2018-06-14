@@ -45,4 +45,5 @@ if($consulta){
 
     header('refresh:5; url=../Pagina/LogIn.php'); //recargar la pagina para volver a introducir datos
 }
+
 ?>
