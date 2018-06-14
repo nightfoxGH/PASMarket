@@ -1,9 +1,12 @@
-
+@font-face {
+  font-family: "Karmatic Arcade";
+  src: url(../fuentes/ka1.ttf) format("contorns");
+}
 section.artRandom {
   border: 3px solid red;
   position: relative;
   margin: auto;
-  height: 100%;
+  height: 900px;
   width: 50%
 }
 section.foto {
@@ -14,6 +17,7 @@ section.foto {
   float: left;
 }
 section.datos {
+
   border: 3px solid green;
   float: right;
   position: absolute;
@@ -22,11 +26,18 @@ section.datos {
   width: 59%;
   right: 0;
 }
+section.datos p{
+  text-align: center;
+  vertical-align: middle;
+  margin:auto;
+}
 section.descripcion {
+  text-align: center;
   border: 3px solid black;
-  position: relative;
+  position: absolute;
   top:400px;
-  width: 100%
+  width: 100%;
+  height: auto;
 }
 section.feedback {
   border: 3px solid purple;

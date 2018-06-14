@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-
+<?php
+session_abort();
+?>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <!--<meta charset="UTF-8">-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>PAS MARKET</title>
         <link rel="stylesheet" type="text/css" href="../Estilos/estiloBody.css">
         <link rel="stylesheet" type="text/css" href="../Estilos/estiloHeader.css">
@@ -14,6 +17,7 @@
             <section class="logo" id="logo">
                 <img src="../Imagenes/Captura.svg"/>
             </section>
+            <h1 class="titulo">PASMARKET</h1>
             <section class="barUsuario">
                 <a id="hueco1" href="logon.php">Registrar</a>
                 <a id="hueco2" href="LogIn.php">Acceder</a>
@@ -22,7 +26,6 @@
             </section>
         </header>
         <nav class="topnav" id="myTopnav">
-            <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; open</span>
             <a href="index.php" class="active">Inicio</a>
             <a href="artAleat.php">Articulo Aleatorio</a>
             <a href="ofertas.php">Ofertas</a>
@@ -30,21 +33,12 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <input type="text" placeholder="Search..">
         </nav>
         <section class="cuerpo" id="cuerpo">
-            <section class="desplegable" id="mydesplegable">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Ordenadores</a>
-                <a href="#">Perifericos</a>
-                <a href="#">Componentes</a>
-                <a href="#">Tablets</a>
-                <a href="#">Accesorios</a>
-            </section>
 
             <section class="catalogo" id="mycatalogo">
                 <!-------------------------- FILA DE ORDENADORES DE SOBREMESA -------------------------------->
-                <h2>PC's De Sobremesa</h2>
+                <h2 class="encavezado">PC's De Sobremesa</h2>
                 <table id="muestra_sobremesa">
                     <tr class="celdaCat">
                         <?php
@@ -55,8 +49,6 @@
                         while($i < 6):
                             $id = rand(1, 8);
                             $sql = "SELECT nombre FROM sobremesa WHERE cod_pc_sobremesa = '$id'";
-                            //foreach (mysqli_query($mysqli, $sql) as $row){
-                        // <?php echo $row['nombre'] <br> <?php echo $row[foto]
                             $consulta = mysqli_query ($mysqli, $sql);
                             $row = $consulta->fetch_assoc()
                         ?>
@@ -68,7 +60,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE ACCESORIOS -------------------------------->
-                <h2>Accesorios De Todo Tipo</h2>
+                <h2 class="encavezado">Accesorios De Todo Tipo</h2>
                 <table id="muestra_accesorios">
                     <tr class="celdaCat">
                     <?php
@@ -89,7 +81,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE COMPONENTES -------------------------------->
-                <h2>Componentes Para Actualizar Tu PC</h2>
+                <h2 class="encavezado">Componentes Para Actualizar Tu PC</h2>
                 <table id="muestra_componentes">
                     <tr class="celdaCat">
                     <?php
@@ -110,7 +102,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE MOVILES -------------------------------->
-                <h2>¡Renueva Tu Movil Con Uno De Estos!</h2>
+                <h2 class="encavezado">¡Renueva Tu Movil Con Uno De Estos!</h2>
                 <table id="muestra_moviles">
                     <tr class="celdaCat">
                     <?php
@@ -131,7 +123,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE PERIFERICOS -------------------------------->
-                <h2>Un Periferico Para Tu Mejor Rendimiento</h2>
+                <h2 class="encavezado">Un Periferico Para Tu Mejor Rendimiento</h2>
                 <table id="muestra_Perifericos">
                     <tr class="celdaCat">
                         <?php
@@ -152,7 +144,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE TABLETS -------------------------------->
-                <h2>Regala Una De Estas Tablets A Tu Hijo</h2>
+                <h2 class="encavezado">Regala Una De Estas Tablets A Tu Hijo</h2>
                 <table id="muestra_tablets">
                     <tr class="celdaCat">
                         <?php
@@ -173,7 +165,7 @@
                     </tr>
                 </table>
                     <!-------------------------- FILA DE MOVILES -------------------------------->
-                <h2>El Mejor Rendimiento En Nuestro Stock De Portátiles</h2>
+                <h2 class="encavezado">El Mejor Rendimiento En Nuestro Stock De Portátiles</h2>
                 <table id="muestra_portatiles">
                     <tr class="celdaCat">
                         <?php
@@ -196,7 +188,25 @@
             </section>
         </section>
         <footer>
-
+            <div class="colizq">
+                <p><i>Contactanos, siempre a tu disposicion.</i></p>
+                <p>Calle Vargas, 65, 39010 Santander, Cantabria.</p>
+                <p>Telefono de atencion al cliente: 942231344</p>
+                <br>
+                <br>
+                <h1>Tu satisfaccion es lo primero.</h1>
+            </div>
+            <div class="colder">
+                <h3>Indice</h3>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="ofertas.php">Ofertas</a></li>
+                    <li><a href="artAleat.php">Articulo Aleatorio</a></li>
+                    <li><a href="contact.php">Contacto</a></li>
+                    <li><a href="LogIn.php">Acceder</a></li>
+                    <li><a href="logon.php">Registrar</a></li>
+                </ul>
+            </div>
         </footer>
         <script>
             function openNav() {

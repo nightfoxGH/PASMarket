@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-
+<?php
+session_abort();
+?>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>PAS MARKET</title>
     <link rel="stylesheet" type="text/css" href="../Estilos/estiloBody.css">
     <link rel="stylesheet" type="text/css" href="../Estilos/estiloHeader.css">
@@ -22,7 +24,6 @@
     </section>
 </header>
 <nav class="topnav" id="myTopnav">
-    <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <a href="index.php">Inicio</a>
     <a href="artAleat.php">Articulo Aleatorio</a>
     <a href="ofertas.php" class="active">Ofertas</a>
@@ -30,39 +31,29 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
-    <input type="text" placeholder="Search..">
 </nav>
 <section class="cuerpo" id="cuerpo">
-    <section class="desplegable" id="mydesplegable">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Ordenadores</a>
-        <a href="#">Perifericos</a>
-        <a href="#">Componentes</a>
-        <a href="#">Tablets</a>
-        <a href="#">Accesorios</a>
-    </section class="cuerpo">
+    <!--<section class="cuerpo">-->
         <section class="catalogo" id="mycatalogo">
             <!-------------------------- TABLA DE OFERTAS -------------------------------->
-            <h2>PC's De Sobremesa</h2>
             <table class="ofertas">
                 <tr class="filaOferta" id="ordenadores">
                     <?php
-                    $i = 1;
                     $numOfertas = 0;
                     $mysqli = new mysqli("127.0.0.1", "root", "", "pasmarket", 3306);
-                    for($i;$i<20;$i++){
-                        $sql = "SELECT * FROM sobremesa WHERE cod_pc_sobremesa = '$i' AND oferta = TRUE";
+                    for($i=1;$i<15;$i++){
+                        $sql = "SELECT nombre FROM sobremesa WHERE cod_pc_sobremesa = '$i' AND oferta = TRUE";
                         $consulta = mysqli_query ($mysqli, $sql);
                         $row = $consulta->fetch_assoc();
-                        if ( $row['nombre']!="" && $numOfertas != 5 ) {
+                        if ( $row['nombre']!="" && $numOfertas!=6) {
                             ?>
                             <td><?php echo $row['nombre'] ?></td>
                             <?php
-                            $numOfertas++;
                         }
-                        elseif ( $numOfertas = 6 ){
+                        /*elseif ( $numOfertas = 6 ){
+                            echo $numOfertas;
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -81,9 +72,9 @@
                             <?php
                             $numOfertas++;
                         }
-                        elseif ( $numOfertas = 6 ){
+                        /*elseif ( $numOfertas = 6 ){
                             break;
-                        }
+                        }*/
 
                     }
                     ?>
@@ -102,10 +93,10 @@
                             <td><?php echo $row['nombre'] ?></td>
                             <?php
                             $numOfertas++;
-                        }
+                        }/*
                         elseif ( $numOfertas = 6 ){
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -124,9 +115,9 @@
                             <?php
                             $numOfertas++;
                         }
-                        elseif ( $numOfertas > 5 ){
+                        /*elseif ( $numOfertas > 5 ){
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -144,10 +135,10 @@
                             <td><?php echo $row['nombre'] ?></td>
                             <?php
                             $numOfertas++;
-                        }
+                        }/*
                         elseif ( $numOfertas > 5 ){
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -165,10 +156,10 @@
                             <td><?php echo $row['nombre'] ?></td>
                             <?php
                             $numOfertas++;
-                        }
+                        }/*
                         elseif ( $numOfertas > 5 ){
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -183,13 +174,13 @@
                         $row = $consulta->fetch_assoc();
                         if ( $row['nombre']!="" && $numOfertas != 5 ) {
                             ?>
-                            <td><?php echo $row['nombre'] ?></td>
+                            <td><img src="<?php echo $row['Foto']; ?>"><?php echo $row['nombre']; ?></td>
                             <?php
                             $numOfertas++;
-                        }
+                        }/*
                         elseif ( $numOfertas > 5 ){
                             break;
-                        }
+                        }*/
                     }
                     ?>
                 </tr>
@@ -197,7 +188,25 @@
         </section>
     </section>
 <footer>
-
+    <div class="colizq">
+        <p><i>Contactanos, siempre a tu disposicion.</i></p>
+        <p>Calle Vargas, 65, 39010 Santander, Cantabria.</p>
+        <p>Telefono de atencion al cliente: 942231344</p>
+        <br>
+        <br>
+        <h1>Tu satisfaccion es lo primero.</h1>
+    </div>
+    <div class="colder">
+        <h3>Indice</h3>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="ofertas.php">Ofertas</a></li>
+            <li><a href="artAleat.php">Articulo Aleatorio</a></li>
+            <li><a href="contact.php">Contacto</a></li>
+            <li><a href="LogIn.php">Acceder</a></li>
+            <li><a href="logon.php">Registrar</a></li>
+        </ul>
+    </div>
 </footer>
 <script>
     function openNav() {

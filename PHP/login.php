@@ -28,19 +28,21 @@ $pass=$_POST['pass'];
 
 // ejecutar consulta y guardar resultado en la variable
 
-$consulta = mysqli_query ($mysqli, 'SELECT * FROM clientes WHERE usuario = "$user" AND pass = "$pass"');
+$consulta = mysqli_query($mysqli, 'SELECT * FROM clientes WHERE usuario = "$user" AND pass = "$pass"');
 
 // comprobacion de funcionamiento
 
 if($consulta){
 
-    echo "Bienvenido";
-    session_start(); //iniciar sesion
-    header( "refresh:5; url=../Pagina/index.php" );  //volver a la pagina principal
+    //echo "Bienvenido";
+    $_SESSION['sesion'] = true;
+    $_SESSION['usernameLogIn'] = $_POST['user'];
+    header( "refresh:5; url=../PaginaLoged/index.php" );  //volver a la pagina principal
+
 }else{
 
-    echo "usuario no existe";
+    //echo "usuario no existe";
 
-    header('Location: ../Pagina/LogIn.php'); //recargar la pagina para volver a introducir datos
+    header('refresh:5; url=../Pagina/LogIn.php'); //recargar la pagina para volver a introducir datos
 }
 ?>

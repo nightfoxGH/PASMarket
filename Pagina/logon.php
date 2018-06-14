@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" charset="utf-8">
@@ -6,11 +7,6 @@
 
   </head>
   <body>
-    <?php
-      if ($register_error_message != "") {
-        echo '<div class="alert alert-danger"><strong>Error: </strong> ' . $register_error_message . '</div>';
-      }
-    ?>
     <div class="contenido">
       <h1>Log On / Regístrate</h1>
     </div>
@@ -33,17 +29,11 @@
                 Contraseña:<br><br>
                 <input type="text" name="pass" value="Contraseña">
                 <br><br>
-                DNI:<br><br>
-                <input type="text" name="dni" value="DNI">
-                <br><br>
                 Fecha de nacimiento:<br><br>
                 <input type="text" name="nacimiento" value="Fecha de Nacimiento">
                 <br><br>
                 Correo:<br><br>
                 <input type="text" name="correo" value="Correo">
-                <br><br>
-                País:<br><br>
-                <input type="text" name="pais" value="Pais">
                 <br><br>
                 Provincia:<br><br>
                 <input type="text" name="provincia" value="Provincia">

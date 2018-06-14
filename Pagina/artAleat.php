@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-
+<?php
+session_abort();
+?>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>PAS MARKET</title>
         <link rel="stylesheet" type="text/css" href="../Estilos/estiloBody.css">
         <link rel="stylesheet" type="text/css" href="../Estilos/estiloHeader.css">
@@ -10,9 +12,6 @@
         <link rel="stylesheet" type="text/css" href="../Estilos/estiloRandom.css">
     </head>
     <body>
-        <?php
-
-        ?>
         <header>
             <img src="">
             <section class="logo" id="logo">
@@ -26,7 +25,6 @@
             </section>
         </header>
         <nav class="topnav" id="myTopnav">
-            <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; open</span>
             <a href="index.php">Inicio</a>
             <a href="artAleat.php" class="active">Articulo Aleatorio</a>
             <a href="ofertas.php">Ofertas</a>
@@ -34,37 +32,56 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-            <input type="text" placeholder="Search..">
         </nav>
         <section class="cuerpo">
-            <section class="desplegable" id="mydesplegable">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Ordenadores</a>
-                <a href="#">Componentes</a>
-                <a href="#">Ordenadores</a>
-                <a href="#">Tablets</a>
-                <a href="#">Accesorios</a>
-            </section>
 
             <section class="artRandom" id="myRandom">
+                <?php
+                $random=rand(1, 8);
+                $mysqli = new mysqli("127.0.0.1", "root", "", "pasmarket", 3306);
+                $sql = "select * from sobremesa INNER JOIN productos ON productos.cod_pc_sobremesa = sobremesa.cod_pc_sobremesa WHERE productos.cod_producto = '$random' ";
+                $consulta = mysqli_query ($mysqli, $sql);
+                $row = $consulta->fetch_assoc();
+                if($random<9){
+                ?>
               <section class="foto">
-                <img src="#"/>
-                <p>AQUI VA LA FOTO DESDE LA B.D.</p>
+                <img src="<?php echo $row['Foto']; ?>"/>
               </section>
               <section class="datos">
-                <p>Ejemplo de texto</p>
-                <p>AQUI VAN LOS DATOS DE LA B.D.</p>
+                  <br><br><br><br><br>
+                  <p><?php echo $row['nombre']; ?></p>
+                  <p><?php echo $row['pvp']; ?></p>
+                  <p><?php echo $row['marca']; ?></p>
+                  <p><?php echo $row['disponible']; ?></p>
+                  <p><?php echo $row['so']; ?></p>
               </section>
+
               <section class="descripcion">
-                <p>AQUI VA LA DESCRIPCION<br>EL ALTO VARIA SEGUN LO ESCRITO</p>
+                <?php echo $row['descripcion'] ?>
               </section>
-              <section class="feedback">
-                <p>AQUI VA LA VALORACION<br>EL ALTO VARIA SEGUN LO ESCRITO</p>
-              </section>
-            </section>
+                <?php } ?>
+        </section>
         </section>
         <footer>
-
+            <div class="colizq">
+                <p><i>Contactanos, siempre a tu disposicion.</i></p>
+                <p>Calle Vargas, 65, 39010 Santander, Cantabria.</p>
+                <p>Telefono de atencion al cliente: 942231344</p>
+                <br>
+                <br>
+                <h1>Tu satisfaccion es lo primero.</h1>
+            </div>
+            <div class="colder">
+                <h3>Indice</h3>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="ofertas.php">Ofertas</a></li>
+                    <li><a href="artAleat.php">Articulo Aleatorio</a></li>
+                    <li><a href="contact.php">Contacto</a></li>
+                    <li><a href="LogIn.php">Acceder</a></li>
+                    <li><a href="logon.php">Registrar</a></li>
+                </ul>
+            </div>
         </footer>
         <script>
             function openNav() {
